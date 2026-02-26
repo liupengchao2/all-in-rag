@@ -3,6 +3,7 @@ import os
 from dotenv import load_dotenv
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, Settings 
 from llama_index.llms.openai_like import OpenAILike
+from llama_index.llms.openai import OpenAI
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 load_dotenv()
@@ -16,7 +17,7 @@ load_dotenv()
 # )
 
 Settings.llm = OpenAI(
-    model="deepseek-chat",
+    model="deepseek-chat"
     api_key=os.getenv("DEEPSEEK_API_KEY"),
     api_base="https://api.deepseek.com"
 )
