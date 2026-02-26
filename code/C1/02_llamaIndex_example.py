@@ -17,7 +17,7 @@ load_dotenv()
 # )
 
 Settings.llm = OpenAI(
-    model="deepseek-chat"
+    model="deepseek-chat",
     api_key=os.getenv("DEEPSEEK_API_KEY"),
     api_base="https://api.deepseek.com"
 )
